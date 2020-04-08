@@ -40,7 +40,7 @@ localhost:3000/
 # 后台游戏添加效果图
 <img src="https://github.com/world-G/MyGame/blob/master/readme/L%25YX0T(GLWP6MX%5D)E7Y%249D9.png" alt="游戏添加">
 
-<img src="https://github.com/world-G/MyGame/blob/master/readme/L%YX0T(GLWP6MX])E7Y$9D9.png" width="1000" alt="游戏添加">
+<img src="https://github.com/world-G/MyGame/blob/master/readme/PQXCB%5BD%25L%7DB%5B%7BO(58%24G7AR6.png" width="1000" alt="游戏添加">
 
 
 
