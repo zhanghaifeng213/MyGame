@@ -35,7 +35,7 @@ localhost:3000/
 <img src="https://github.com/world-G/MyGame/blob/master/readme/PY2F1W7_($GR8YY5Y6I~)A5.png" width="1000" alt="购物车">
 
 # 后台首页效果图
-<img src="https://github.com/world-G/MyGame/blob/master/readme/6Q86M3TEIAD{SS1(M[O]N%A.png" width="1000" alt="后台首页">
+<img src="https://github.com/world-G/MyGame/blob/master/readme/6Q86M3TEIAD%7BSS1(M%5BO%5DN%25A.png" width="1000" alt="后台首页">
 
 # 后台游戏添加效果图
 <img src="https://github.com/world-G/MyGame/blob/master/readme/PQXCB[D%L}B[{O(58$G7AR6.png" width="1000" alt="游戏添加">
