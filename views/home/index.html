@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= webconfig.title %></title>
+    <meta name="keywords" content="<%= webconfig.keywords %>">
+    <meta name="description" content="<%= webconfig.description %>">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../public/home/css/index.css">
+    <link rel="stylesheet" href="../../public/home/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="Shortcut Icon" href="../../public/home/ico/mygame-1.ico" type="image/x-icon"/>
+    <script src="../../public/home/js/jquery.easing.min.js"></script>
+    <script src="../../public/home/js/main.js"></script>
+
+<body>
+<div class="one">
+</div>
+<div class="bbb">
+    <i class="fa fa-angle-right" aria-hidden="true"></i>
+</div>
+<div class="nav" id="first">
+    <div class="logo">
+        <a href="/">
+            <img src="<%= webconfig.logo %>" alt="" height="50px"width="180px">
+        </a>
+    </div>
+    <ul>
+        <li><a href="/" class="glyphicon glyphicon-home"></a></li>
+        <li><a href="/store" class="glyphicon glyphicon-th" ></a></li>
+        <li><a href="/cart" class="glyphicon glyphicon-shopping-cart" ></a></li>
+    </ul>
+    <div class="nav-2">
+        <a href="/logout">注销</a>
+        <a>|</a>
+        <a id="login">登录</a>
+        <a>|</a>
+        <a href="/login">开发者界面</a>
+    </div>
+</div>
+<div class="top">
+    <div class="ch">
+        <span> <a href="/">精选</a></span>
+    </div>
+    <ul>
+        <li><a href="#"class="f">大型网游</a></li>
+        <li>|</li>
+        <li><a href="#"class="f">单机</a></li>
+        <li>|</li>
+        <li><a href="#" class="t">梦三国2预约</a></li>
+        <li>|</li>
+        <li><a href="#" class="t">三国杀手游</a></li>
+    </ul>
+    <form class="search" action="" method="get">
+        <input type="text" placeholder="龙之谷" name="" id="" value="">
+        <button><i class="glyphicon glyphicon-search" ></i></button>
+    </form>
+</div>
+<div class="login-mask">
+    <div class="login-box" id="login_div">
+        <div id="close">
+            <p>×</p>
+        </div>
+        <div class="jj">
+            <ul>
+                <li id="denglu" onclick="changePage('login2')" style="border-bottom: 5px solid #f69c00;color: #f69c00">登录</li>
+                <li id="zhuce" onclick="changePage('register')">注册</li>
+            </ul>
+        </div>
+        <div class="div_login" id="login2">
+            <p>账号密码登录</p>
+            <form action="/check" method="post">
+                <input type="text" name="username" required id="username" placeholder="请输入账号"  autofocus></br>
+                <input type="password" name="password" required id="password" placeholder="请输入密码"></br>
+                <button type="submit">登录</button>
+            </form>
+            <div class="di">
+                <ul>
+                    <a href="#"><li>忘记密码？|</li></a>
+                    <a href="#"><li>意见反馈 |</li></a>
+                    <a href="#"><li>联系客服</li></a>
+                </ul>
+            </div>
+        </div>
+        <!-- 注册表单 -->
+        <div class="div_register" id="register">
+            <p>欢迎加入MyGame</p>
+            <form method="post" action="">
+                <table>
+                    <tr>
+                        <td><label for="username">账号:</label></td>
+                        <td><input type="text" name="username" required placeholder="请输入账号"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">密码:</label></td>
+                        <td><input type="password" name="password" required placeholder="密码为(6-18位数字、字母、符号)"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">确认密码:</label></td>
+                        <td><input type="password" name="repassword" required placeholder="再次输入密码"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">电子邮箱:</label></td>
+                        <td><input type="email" name="email" required id="email" placeholder="请输入您的邮箱"></td>
+                    </tr>
+                </table>
+                <div class="tijiao">
+                    <button type="submit">注册</button>
+                    <button type="reset">重置</button>
+                </div>
+            </form>
+            <div class="di">
+                <ul>
+                    <a href="#"><li>忘记密码？|</li></a>
+                    <a href="#"><li>意见反馈 |</li></a>
+                    <a href="#"><li>联系客服</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--背景大图-->
+<div id="bg001" >
+    <div id="bg002">
+        <img src="../../public/home/image/tiao004.jpeg" height="100%" width="100%"/>
+    </div>
+    <img src="../../public/home/image/background004.jpeg" height="100%" width="100%"/>
+</div>
+<!--左侧标签栏-->
+<div class="left-t">
+    <div class="weix">
+        <div class="w-image">
+            <img src="../../public/home/image/weixin.png" height="100%" width="100%"/></div>
+        <div class="font">
+            <p>关注微信公众号</p>
+            <p>赢惊喜大礼包</p>
+        </div>
+    </div>
+    <!--左侧标签栏-->
+    <div class="tag">
+        <p>热门标签</p>
+        <ul>
+            <% typeData.forEach(item=>{ %>
+            <li><a href="/store?id=<%= item.id %>"><%= item.name %></a></li>
+            <% }) %>
+
+        </ul>
+    </div>
+    <!--左侧广告栏-->
+    <div class="guang">
+        <img src="../../public/home/image/guanggao01.jpg" height="100%" width="100%"/>
+        <div class="ti"><a href="/store">了解详情</a></div>
+    </div>
+</div>
+<!--轮播图-->
+<div class="ag7-main">
+    <div class="ag7-bannerslide">
+
+        <ul class="slidebox">
+            <% sliderData.forEach(item=>{ %>
+            <li><a href="/store"><img src="<%=item.img %>"></a></li>
+            <% }) %>
+        </ul>
+        <div class="slidelist">
+            <ul>
+                <% sliderData.forEach(item=>{ %>
+                <li><%=item.name %></li>
+                <% }) %>
+            </ul>
+            <span class="mask"></span>
+        </div>
+    </div>
+
+</div>
+
+<!--热点预告-->
+<div class="h" id="two"><h3>腾讯专区</h3></div>
+<div class="z">
+    <button id="right"><i class="fa fa-angle-right" aria-hidden="true"></i>  </button>
+    <button id="left"><i class="fa fa-angle-left" aria-hidden="true"></i>  </button>
+    <table>
+        <tr id="content">
+            <% gameData.forEach(item=>{ %>
+            <td>
+                <div class="t1">
+                    <div class="zi">
+                        <div class="p">
+                            <p>￥<%=item.price %></p>
+                        </div>
+                        <div class="na">
+                            <span><%=item.name %></span>
+                            <p><%=item.description %></p>
+                        </div>
+                        <div class="bt"><a href="#" id="bt">加购物车</a></div>
+                        <div class="shu"></div>
+                        <div class="bt"><a href="/particulars?id=<%= item.id %>">游戏详情</a></div>
+                    </div>
+                <div class="tu">
+                    <img src="<%= item.img %>" alt="">
+
+
+                </div>
+
+            </div>
+            </td>
+            <% }) %>
+        </tr>
+    </table>
+</div>
+<!--更多推荐-->
+<div class="zz" id="three">
+<div class="game-01">
+    <h3>火爆新品</h3>
+    <% gamesData.forEach(item=>{ %>
+    <div class="tu-2">
+        <div class="jieshao">
+            <div class="jiangbei">
+                <img src="../../public/home/image/奖杯.png" height="100%" width="100%"/>
+                <p><%= item.name %></p>
+                <div class="ppp">￥<%= item.price %></div>
+            </div>
+        </div>
+        <a href="/particulars?id=<%= item.id %>">
+        <img src="<%= item.img %>">
+            <span>
+            <div class="top01"></div>
+                    <div class="timg">
+                        <img src="<%= item.img %>">
+                    </div>
+                    <div class="wennn">
+                        <p><%= item.name %></p>
+                        <div><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.time %>上线</div>
+                        <div><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.num %></div>
+                        <div><i class="fa fa-tag" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.tname %></div>
+                    </div>
+            </span>
+        </a>
+    </div>
+    <% }) %>
+    <ul>
+        <% gamessData.forEach(item=>{ %>
+        <li>
+            <div class="pic">
+                <a href="/particulars?id=<%= item.id %>">
+                <img src="<%= item.img %>" >
+                </a>
+                <span>
+            <div class="top01"></div>
+                    <div class="timg">
+                        <img src="<%= item.img %>">
+                    </div>
+                    <div class="wennn">
+                        <p><%= item.name %></p>
+                        <div><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.time %>上线</div>
+                        <div><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.num %></div>
+                        <div><i class="fa fa-tag" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.tname %></div>
+                    </div>
+            </span>
+            </div>
+            <div class="tet">
+                <div><%= item.name %></div>
+                <div class="pp">￥<%= item.price %></div>
+            </div>
+            <div class="add">
+                <a title="加入购物车"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+            </div>
+        </li>
+        <% }) %>
+    </ul>
+</div>
+    <div class="game-02">
+        <h3>优惠专区</h3>
+        <% gametwoData.forEach(item=>{ %>
+        <div class="tu-2">
+            <div class="jieshao">
+                <div class="jiangbei">
+                    <img src="../../public/home/image/奖杯.png" height="100%" width="100%"/>
+                    <p><%= item.name %></p>
+                    <div class="ppp">￥<%= item.price %></div>
+                </div>
+            </div>
+            <a href="/particulars?id=<%= item.id %>">
+            <img src="<%= item.img %>">
+                <span>
+            <div class="top01"></div>
+                    <div class="timg">
+                        <img src="<%= item.img %>">
+                    </div>
+                    <div class="wennn">
+                        <p><%= item.name %></p>
+                        <div><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.time %>上线</div>
+                        <div><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.num %></div>
+                        <div><i class="fa fa-tag" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.tname %></div>
+                    </div>
+            </span>
+            </a>
+
+        </div>
+        <% }) %>
+        <ul>
+            <% gamethreeData.forEach(item=>{ %>
+            <li>
+                <div class="pic">
+                    <a href="/particulars?id=<%= item.id %>">
+                    <img src="<%= item.img %>" >
+                    </a>
+                    <span>
+                        <div class="top01"></div>
+                         <div class="timg">
+                        <img src="<%= item.img %>">
+                    </div>
+                    <div class="wennn">
+                        <p><%= item.name %></p>
+                        <div><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.time %>上线</div>
+                        <div><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.num %></div>
+                        <div><i class="fa fa-tag" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.tname %></div>
+                    </div>
+                    </span>
+                </div>
+                <div class="tet">
+                    <div><%= item.name %></div>
+                    <div class="pp"> ￥<%= item.price %></div>
+                </div>
+                <div class="add">
+                    <a title="加入购物车"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+                </div>
+            </li>
+            <% }) %>
+        </ul>
+    </div>
+    <div class="game-03">
+        <h3>口碑佳作</h3>
+       <ul>
+           <% gamefourData.forEach(item=>{ %>
+           <li>
+               <div class="pic">
+                   <a href="/particulars?id=<%= item.id %>">
+                   <img src="<%= item.img %>" >
+                   </a>
+                   <span>
+            <div class="top01"></div>
+                    <div class="timg">
+                        <img src="<%= item.img %>">
+                    </div>
+                    <div class="wennn">
+                        <p><%= item.name %></p>
+                        <div><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.time %>上线</div>
+                        <div><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.num %></div>
+                        <div><i class="fa fa-tag" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.tname %></div>
+                    </div>
+            </span>
+               </div>
+               <div class="tet">
+                   <div><%= item.name %></div>
+                   <div class="pp">￥<%= item.price %></div>
+               </div>
+               <div class="add">
+                   <a title="加入购物车"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+               </div>
+           </li>
+           <% }) %>
+       </ul>
+        <div class="hhh">
+            <h3>最新上架</h3>
+        </div>
+        <ul>
+            <% gamefiveData.forEach(item=>{ %>
+            <li>
+                <div class="pic">
+                    <a href="/particulars?id=<%= item.id %>">
+                    <img src="<%= item.img %>" >
+                    </a>
+                    <span>
+            <div class="top01"></div>
+                    <div class="timg">
+                        <img src="<%= item.img %>">
+                    </div>
+                    <div class="wennn">
+                        <p><%= item.name %></p>
+                        <div><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.time %>上线</div>
+                        <div><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.num %></div>
+                        <div><i class="fa fa-tag" aria-hidden="true"></i>&nbsp&nbsp&nbsp<%= item.tname %></div>
+                    </div>
+            </span>
+                </div>
+                <div class="tet">
+                    <div><%= item.name %></div>
+                    <div class="pp"> ￥<%= item.price %></div>
+                </div>
+                <div class="add">
+                    <a title="加入购物车"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+                </div>
+            </li>
+            <% }) %>
+        </ul>
+    </div>
+</div>
+<div class="h" id="four">
+    <h3>留言列表</h3>
+</div>
+<div class="comments">
+    <div class="comment-wrap">
+        <div class="comment-block">
+            <div class="comment-img">
+                <img src="../../public/home/image/rem001.jpg">
+            </div>
+            <ul>
+                <li class="com-1">小王</li>
+                <li class="com-2">@英雄联盟</li>
+            </ul>
+            <p class="comment-text"><i class="fa fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam reprehenderit
+                quasi sapiente modi tempora at perspiciatis mollitia, dolores voluptate. Cumque, corrupti?<i class="fa fa-quote-right"></i></p>
+            <div class="bottom-comment">
+                <div class="comment-date">2014-01-02</div>
+            </div>
+        </div>
+    </div>
+    <div class="comment-wrap">
+        <div class="comment-block">
+            <div class="comment-img">
+                <img src="../../public/home/image/rem001.jpg">
+            </div>
+            <ul>
+                <li class="com-1">小王</li>
+                <li class="com-2">@英雄联盟</li>
+            </ul>
+            <p class="comment-text"><i class="fa fa-quote-left"></i>《中国式家长》抓住了中国一代人「万人过独木桥」的集体记忆，无数的「魔幻」梗让人哭笑不得，也唏嘘不已。然而作为一款模拟经营游戏，本作的最优解却与现实相差甚远，暴露了游戏题材与玩法脱节的问题。每一代人的玩法几乎没有变化，游戏的立意也就此停在了「隔靴搔痒」的阶段。「女儿版」《中国式家长》抓住了中国一代人「万人过独木桥」的集体记忆，无数的「魔幻」梗让人哭笑不得，也唏嘘不已。然而作为一款模拟经营游戏，本作的最优解却与现实相差甚远，暴露了游戏题材与玩法脱节的问题。每一代人的玩法几乎没有变化，游戏的立意也就此停在了「隔靴搔痒」的阶段。「女儿版」的更新体现了团队愿意深入挖掘题材的诚心，期待游戏能长成一部在题材和玩法上都更有洞见的「人生模拟器」。的更新体现了团队愿意深入挖掘题材的诚心，期待游戏能长成一部在题材和玩法上都更有洞见的「人生模拟器」。《中国式家长》抓住了中国一代人「万人过独木桥」的集体记忆，无数的「魔幻」梗让人哭笑不得，也唏嘘不已。然而作为一款模拟经营游戏，本作的最优解却与现实相差甚远，暴露了游戏题材与玩法脱节的问题。每一代人的玩法几乎没有变化，游戏的立意也就此停在了「隔靴搔痒」的阶段。「女儿版」的更新体现了团队愿意深入挖掘题材的诚心，期待游戏能长成一部在题材和玩法上都更有洞见的「人生模拟器」。
+                <i class="fa fa-quote-right"></i></p>
+            <div class="bottom-comment">
+                <div class="comment-date">2014-01-02 15:39:28</div>
+            </div>
+        </div>
+    </div>
+    <!--留言-->
+    <div class="comment-wrap">
+        <div class="comment-block">
+            <form action="">
+                <textarea name=""  cols="30" rows="3" placeholder="Say somthing..."></textarea>
+            </form>
+        </div>
+    </div>
+    <button>评论</button>
+</div>
+<!--右侧导航栏-->
+<div class="dao">
+    <div class="kj">
+        <div>快捷</div>
+        <div>导航</div>
+    </div>
+    <ul>
+        <li>
+            <a  title="热点预告" href="#two" class=" glyphicon glyphicon-fire " >
+            </a>
+        </li>
+        <li>
+            <a title="排行榜" href="#three" >
+                <i class="fa fa-trophy" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a title="我要评论" href="#four">
+                <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            </a>
+
+        </li>
+        <li>
+            <a title="回到顶部" href="#first" >
+                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a title="我的购物车" href="/cart" >
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<!--底部-->
+<div class="fi">
+    <div class="dan">
+        <div class="kehu">
+            <div class="k">
+                下载客户端：
+            </div>
+            <div class="l">
+                <div class="y">
+                    <i class="fa fa-windows" aria-hidden="true"></i>
+                </div>
+                <p class="q">PC端</p>
+            </div>
+        </div>
+        <div class="kehu">
+            <div class="k">
+                官方渠道：
+            </div>
+            <div class="l">
+                <div class="y">
+                    <i class="fa fa-weixin" aria-hidden="true"></i>
+                </div>
+                <p class="q">微信</p>
+            </div>
+        </div>
+        <div class="kehu2">
+            <div class="k">
+                友情链接：
+            </div>
+            <table>
+                <tr>
+                    <td class="yy">
+                        <a>QQ阅读</a>
+                    </td>
+                    <td class="yy">
+                        <a>腾讯GWB</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="yy">
+                        <a>腾讯动漫</a>
+                    </td>
+                    <td class="yy">
+                        <a>腾讯视频</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="dan2">
+        <div class="wei">
+            <p>
+                <a>关于我们|</a>
+                <a>About Mygame|</a>
+                <a>服务条款|</a>
+                <a>用户服务协议|</a>
+                <a>隐私政策|</a>
+                <a>侵权通知|</a>
+                <a>广告服务|</a>
+                <a>客服中心|</a>
+                <a>网站导航</a>
+            </p>
+            <p class="e"><%= webconfig.copyright%></p>
+            <p class="g"><%= webconfig.record%></p>
+        </div>
+    </div>
+</div>
+<!--广告-->
+<div class="ggao">
+    <div class="cl" onclick="closeAdv();">
+        ×
+    </div>
+    <div class="weather">
+        <iframe  width="200" scrolling="no" height="80" frameborder="0" allowtransparency="true" src="//i.tianqi.com/index.php?c=code&id=12&icon=1&py=changshaxian&num=1&site=12"></iframe>
+    </div>
+    <div id="cont">
+    </div>
+    <div id="wh"></div>
+    <div id="riqi"></div>
+</div>
+<!--登录注册-->
+<script src="../../public/home/js/index.js"></script>
+
+</body>
+</html>

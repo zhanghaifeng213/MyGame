@@ -1,0 +1,100 @@
+<div class="nav" id="first">
+    <div class="logo">
+        <a href="/">
+            <img src="<%= webconfig.logo %>" alt="" height="50px"width="180px">
+        </a>
+    </div>
+    <ul>
+        <li><a href="/" class="glyphicon glyphicon-home"></a></li>
+        <li><a href="/store" class="glyphicon glyphicon-th" ></a></li>
+        <li><a href="/particulars" class="glyphicon glyphicon-shopping-cart" ></a></li>
+    </ul>
+    <div class="nav-2">
+        <a id="login">登录</a>
+        <a>|</a>
+        <a href="#">注销</a>
+        <a>|</a>
+        <a href="/admin">开发者界面</a>
+    </div>
+</div>
+<div class="top">
+    <div class="ch">
+        <span> <a href="/">精选</a></span>
+    </div>
+    <ul>
+        <li><a href="#"class="f">大型网游</a></li>
+        <li>|</li>
+        <li><a href="#"class="f">单机</a></li>
+        <li>|</li>
+        <li><a href="#" class="t">梦三国2预约</a></li>
+        <li>|</li>
+        <li><a href="#" class="t">三国杀手游</a></li>
+    </ul>
+    <form class="search" action="" method="get">
+        <input type="text" placeholder="龙之谷" name="" id="" value="">
+        <button><i class="glyphicon glyphicon-search" ></i></button>
+    </form>
+</div>
+<div class="login-mask">
+    <div class="login-box" id="login_div">
+        <div id="close">
+            <p>×</p>
+        </div>
+        <div class="jj">
+            <ul>
+                <li id="denglu" onclick="changePage('login2')" style="border-bottom: 5px solid #f69c00;color: #f69c00">登录</li>
+                <li id="zhuce" onclick="changePage('register')">注册</li>
+            </ul>
+        </div>
+        <div class="div_login" id="login2">
+            <p>账号密码登录</p>
+            <form action="index.html" method="post">
+                <input type="text" name="username" required id="username" placeholder="请输入账号"  autofocus></br>
+                <input type="password" name="password" required id="password" placeholder="请输入密码"></br>
+                <button type="submit">登录</button>
+            </form>
+            <div class="di">
+                <ul>
+                    <a href="#"><li>忘记密码？|</li></a>
+                    <a href="#"><li>意见反馈 |</li></a>
+                    <a href="#"><li>联系客服</li></a>
+                </ul>
+            </div>
+        </div>
+        <!-- 注册表单 -->
+        <div class="div_register" id="register">
+            <p>欢迎加入Mygame</p>
+            <form action="#" method="post">
+                <table>
+                    <tr>
+                        <td><label for="username">账号:</label></td>
+                        <td><input type="text" name="username" placeholder="请输入账号"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">密码:</label></td>
+                        <td><input type="password" name="password" placeholder="密码为(6-18位数字、字母、符号)"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">确认密码:</label></td>
+                        <td><input type="password" name="password" placeholder="再次输入密码"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">电子邮箱:</label></td>
+                        <td><input type="email" name="email" id="email" placeholder="请输入您的邮箱"></td>
+                    </tr>
+                </table>
+                <div class="tijiao">
+                    <button type="submit">注册</button>
+                    <button type="reset">重置</button>
+                </div>
+            </form>
+            <div class="di">
+                <ul>
+                    <a href="#"><li>忘记密码？|</li></a>
+                    <a href="#"><li>意见反馈 |</li></a>
+                    <a href="#"><li>联系客服</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

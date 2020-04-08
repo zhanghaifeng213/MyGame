@@ -1,0 +1,20 @@
+{
+  "name": "bl",
+  "version": "1.0.0",
+  "description": "mygame游戏销售网站",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "谷、毛、刘",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "moment": "^2.24.0",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "ueditor": "^1.2.3"
+  }
+}

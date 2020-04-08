@@ -1,0 +1,685 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../image/b-1.jpg");
+    background-attachment: fixed;
+}
+::-webkit-scrollbar-thumb{
+
+    background-color:#ff9202;
+
+    height:50px;
+
+    outline-offset:-2px;
+
+    outline:2px solid #fff;
+
+    -webkit-border-radius:4px;
+
+    border: 2px solid #fff;
+
+}
+
+
+
+/*---鼠标点击滚动条显示样式--*/
+
+::-webkit-scrollbar-thumb:hover{
+
+    background-color: #54af00;
+
+    height:50px;
+
+    -webkit-border-radius:4px;
+
+}
+
+
+
+/*---滚动条大小--*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+
+/*---滚动框背景样式--*/
+
+::-webkit-scrollbar-track-piece{
+
+    background-color:#fff;
+
+    -webkit-border-radius:0;
+
+}
+img{max-width: 100%;}
+.nav{
+    z-index: 1;
+    background-color: rgb(21, 21, 21);
+    height: 80px;
+}
+.nav-2{
+
+    height: 80px;
+    float: right;
+    width: 200px;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-2 a{
+    margin: 10px;
+    color: rgba(190, 190, 190, 0.50);
+
+}
+.nav-2 a:hover{
+    color: white;
+    text-decoration: none;
+}
+.nav ul{
+    display: inline;
+    margin-left:450px;
+    text-align: center;
+    height: 80px;
+    width: 400px;
+
+}
+.nav ul li{
+    margin: 15px 25px 0 25px;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+
+}
+.glyphicon-home{
+    font-size: 40px;
+    margin-top: 5px;
+    color: #ffffff ;
+}
+.glyphicon-home:hover{
+    animation: ro 2s linear infinite;
+    color: #eec208;
+    text-decoration: none;
+    font-size: 35px;
+}
+.glyphicon-th{
+    font-size: 40px;
+    margin-top: 5px;
+    color: #ffffff ;
+}
+.glyphicon-th:hover{
+    animation: ro 2s linear infinite;
+    color: #eec208;
+    text-decoration: none;
+    font-size: 35px;
+}
+.on{
+    animation: ro 2s linear infinite;
+    color: #eec208;
+    font-size: 35px;
+}
+.glyphicon-shopping-cart{
+    font-size: 40px;
+    margin-top: 5px;
+    color: #ffffff ;
+}
+.glyphicon-shopping-cart:hover{
+    animation: ro 2s linear infinite;
+    color: #eec208;
+    text-decoration: none;
+    font-size: 35px;
+}
+@keyframes ro {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.logo{
+    height: 80px;
+    width: 80px;
+    float: left;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo:hover{
+    animation: ro 2s linear infinite;
+}
+.head{
+    position: relative;
+    height: 193px;
+}
+.head img{
+    width: 100%;
+    height: 100%;
+}
+.t-1{
+    top: 20px;
+    height: 20px;
+    width: 1000px;
+
+    margin-left:270px;
+    position: absolute;
+}
+.t-1 ul{
+    margin-left: -40px;
+}
+.t-1 ul li{
+    color: hsla(0,0%,100%,.4);
+    font-size: 14px;
+    list-style: none;
+    float: left;
+    font-weight: initial;
+}
+.t-1 ul li:nth-child(1){
+    color: hsla(0,0%,100%,.6);
+    cursor: pointer;
+}
+.t-2{
+    height: 50px;
+    width: 1000px;
+    position: absolute;
+    top: 70px;
+    margin-left: 270px;
+}
+.imm{
+    background-color: #985f0d;
+    height:150px;
+    width: 105px;
+    float: left;
+}
+.imm img{
+    height: 100%;
+    width: 100%;
+}
+.zzz{
+    margin-top: -20px;
+    height: 50px;
+    width: 500px;
+    margin-left: 150px;
+}
+.zzz h2{
+    line-height:50px;
+    color: #fff;
+}
+.head-2{
+    height: 50px;
+    width: 100%;
+   background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.43);
+}
+.head-2 ul{
+    margin-left: 360px;
+}
+.head-2 ul li{
+    line-height: 50px;
+    text-align: center;
+    list-style: none;
+    height: 50px;
+    width: 98px;
+}
+.head-2 ul li:hover {
+    background-color: rgba(168, 168, 168, 0.32);
+}
+.head-2 ul li a{
+    padding: 13px 0px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #3c3c3c;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 4px solid #ff8f02;
+}
+.game{
+    height: 474px;
+    width: 1000px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 270px;
+    margin-top: 20px;
+}
+.game-1{
+    height: 474px;
+    width: 700px;
+    background-color: #ffffff;
+
+}
+.game-1 img{
+    height: 100%;
+    width: 100%;
+}
+.card{
+    width: 700px;
+    background: #f5f5f5;
+}
+.top-section{
+    height: 474px;
+    width: 700px;
+    overflow: hidden;
+    background: #fff;
+
+}
+#image-container{
+    width:700px;
+    height: 394px;
+}
+.nav2{
+    background-color: #242424;
+    width: 700px;
+    height:80px;
+}
+.nav2 img{
+    margin-top:8px;
+    margin-left: 14px;
+    width: 120px;
+    height:64px;
+    cursor: pointer;
+}
+.nav2 img:hover{
+    border: 1px solid #abb0aa;
+}
+.game-2{
+    height: 474px;
+    width: 300px;
+    background-color: #ffffff;
+}
+.title-1{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 168px;
+    width: 260px;
+
+}
+.title-1 ul{
+  cursor: pointer;
+}
+.title-1 ul li{
+
+    margin-top: 2px;
+    width:260px ;
+    height:32px;
+    list-style: none;
+    margin-left: -40px;
+}
+.ta{
+    overflow: hidden;
+    background-color: #f0f0f0;
+    text-align: center;
+    height: 32px;
+    width: 80px;
+    border-radius: 4px;
+    float: left;
+}
+.ta span{
+    font-size: 12px;
+    color: #757575;
+    line-height: 34px;
+}
+.ble{
+    height: 32px;
+    float: right;
+    width: 178px;
+    background-color:#f0f0f0 ;
+    border-radius: 4px;
+}
+.ble p{
+    margin-left: 10px;
+    font-size: 12px;
+    color: #757575;
+    line-height: 34px;
+}
+.title-2{
+    margin-top: 5px;
+    margin-left: 20px;
+    height: 52px;
+    width: 260px;
+
+}
+.title-2 a{
+    margin-left: 5px;
+    border: 1px solid rgba(84, 84, 84, 0.58);
+    color: #545454;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 1px 4px;
+    margin-top: 5px;
+    float: left;
+}
+.title-2 a:hover{
+    color: #545454;
+    text-decoration: none;
+    background-color: rgba(227, 227, 227, 0.44);
+    transition: background-color 0.4s;
+}
+.title-3{
+    margin-top:50px;
+    margin-left: 20px;
+    height: 154px;
+    width: 260px;
+}
+.tong{
+    cursor: pointer;
+    text-align: center;
+    height:30px;
+    width: 260px;
+    border: 1px solid rgba(246,156,0,.5);
+    border-radius: 2px;
+    background-color: rgba(255, 187, 139, 0.28);
+}
+.tong span{
+    font-weight: 700;
+    line-height: 25px;
+    font-size: 13px;
+    color: #f69c00;
+}
+.qian{
+    height: 27px;
+    width: 260px;
+    color: #545454;
+    font-size: 15px;
+    line-height: 21px;
+    margin-top: 10px;
+}
+.b{
+    height: 60px;
+    width: 260px;
+}
+.t{
+    color: #3c3c3c;
+    text-align: center;
+    height: 60px;
+    width: 190px;
+    cursor: pointer;
+    background-color: #ffbc21;
+    float: left;
+    line-height: 60px;
+    font-size: 18px;
+}
+.t:hover{
+    background-color: #dd0f0c;
+    color: white;
+    transition: all 0.4s;
+}
+.n{
+    cursor: pointer;
+    font-size:30px;
+    line-height: 60px;
+    float: right;
+    background-color: #ffa427;
+    height: 60px;
+    width: 70px;
+    color: rgba(0, 0, 0, 0.39);
+    text-align: center;
+}
+.n:hover{
+    color: rgba(255, 255, 255, 0.76);
+    transition: all 0.4s;
+    background-color: #dd0f0c;
+}
+.jie{
+    position: relative;
+    margin-top: 10px;
+    height: 30px;
+    width: 260px;
+}
+.checkbox{
+    height: 18px;
+    width: 18px;
+    box-shadow: none;
+    float: left;
+}
+.jie p{
+    height: 20px;
+    width: 200px;
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    font-size: 13px;
+    color: #545454;
+}
+.jie p a{
+    color: #545454;
+    text-decoration: none;
+}
+.jie p a:hover{
+    color: #ffbc21 ;
+}
+.game-3{
+    width: 1000px;
+    margin-left: 270px;
+    margin-top: 20px;
+}
+.shao{
+    width: 700px;
+    display:inline-block
+}
+.ke{
+    height: 400px;
+    width:280px;
+    background-color: #ffffff;
+    float: right;
+
+    margin-top: 20px;
+}
+.jian{
+    height: 34px;
+    width: 700px;
+}
+.jian h3{
+    height: 34px;
+    border-bottom: 2px solid #ff7507;
+}
+.wen{
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 700px;
+    background-color: #ffffff;
+}
+.wen p{
+    line-height: 30px;
+    color: #3c3c3c;
+    font-size: 14px;
+    padding:20px 20px;
+}
+.biao{
+    margin-top: 25px;
+    height:34px;
+    width:280px;
+}
+.biao h4{
+    margin-left: 20px;
+}
+.ccc{
+    width: 280px;
+}
+.ccc ul{
+    cursor: pointer;
+    margin-top: 30px;
+}
+.ccc ul li{
+    margin-top:10px;
+    width:260px ;
+    height:32px;
+    list-style: none;
+    margin-left: -20px;
+}
+.pa{
+    border-radius: 2px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    float: left;
+}
+.pa span{
+    font-size: 15px;
+    color: rgba(255, 188, 33, 0.59);
+    line-height: 40px;
+}
+.bl{
+    border-radius: 2px;
+    height:40px;
+    float: right;
+    width: 198px;
+    margin-right: 20px;
+    background-color:#f0f0f0 ;
+}
+.bl p{
+    margin-left: 10px;
+    font-size: 12px;
+    color: #757575;
+    line-height: 40px;
+}
+.fi{
+    height: 280px;
+    background-color: rgba(0,0,0,.95);
+}
+.dan{
+    margin-top: 100px;
+    height: 150px;
+}
+.kehu{
+    float: left;
+    margin-top:35px;
+    margin-left: 220px;
+    height: 100px;
+    width: 200px;
+}
+.kehu2{
+    float: left;
+    margin-top: 35px;
+    margin-left: 220px;
+    height: 100px;
+    width: 280px;
+}
+.k{
+    font-size: 17px;
+    color: rgba(223, 223, 223, 0.6);
+    line-height: 40px;
+    float: left;
+    height:40px;
+    cursor: pointer;
+}
+.yy{
+    margin-left: 5px;
+    font-size: 14px;
+    height: 50px;
+    width: 80px;
+}
+.yy a{
+    color:#5d5d5d;
+
+    cursor: pointer;
+}
+.yy a:hover{
+    text-decoration: none;
+    color: rgba(223, 223, 223, 0.6);
+}
+.l{
+    height: 100px;
+    width: 90px;
+    float: right;
+    text-align: center;
+}
+.y{
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 23px;
+    cursor: pointer;
+}
+.y:hover{
+    color: rgba(223, 223, 223, 0.6);
+}
+.q{
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 5px;
+    color:#5d5d5d;
+}
+.q:hover{
+    color: rgba(223, 223, 223, 0.6);
+}
+.dan2{
+    height: 130px;
+}
+.wei{
+    text-align: center;
+    margin-left:32%;
+    height: 100px;
+    width: 600px;
+}
+.wei p a {
+    color:#5d5d5d;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 24px;
+}
+.wei p a:hover{
+    text-decoration: none;
+    color: rgba(223, 223, 223, 0.6);
+}
+.e{
+    color:#5d5d5d;
+    cursor: pointer;
+    font-size: 12px;
+}
+.g{
+    margin-left: 220px;
+    width: 150px;
+    color:#5d5d5d;
+    cursor: pointer;
+    font-size: 12px;
+}
+.g:hover{
+
+    font-size: 12px;
+    color: rgba(223, 223, 223, 0.8);
+}
+.dao{
+    height:120px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.65);
+    position: fixed;
+    top: 50%;
+    right: 8%;
+    border-radius: 30px;
+}
+.dao ul{
+    margin-left: -40px;
+}
+.dao ul li{
+    text-align: center;
+    border-radius: 50%;
+    height: 60px;
+    width: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dao ul li a{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.31);
+}
+.dao ul li :hover{
+
+    text-decoration: none;
+    color: #ffb300;;
+}

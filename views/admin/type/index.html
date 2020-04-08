@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="/public/admin/css/pintuer.css">
+<link rel="stylesheet" href="/public/admin/css/admin.css">
+<script src="/public/admin/js/jquery.js"></script>
+
+<script src="/public/admin/js/pintuer.js"></script>
+</head>
+<body>
+
+  <div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 商品分类列表</strong> <a href="" style="float:right; display:none;">添加字段</a></div>
+    <div class="padding border-bottom">
+      <ul class="search" style="padding-left:10px;">
+        <li> <a class="button border-main icon-plus-square-o" href="/admin/type/add"> 添加分类</a> </li>
+        <li>搜索：</li>
+
+      <li>
+            <form action="" method="get">
+          <input type="text" placeholder="请输入搜索关键字" name="search" class="input" style="width:250px; line-height:17px;display:inline-block" />
+        <button class="button border-main icon-search">搜索</button>
+        </form>
+        </li>
+      </ul>
+    </div>
+    <table class="table table-hover text-center">
+      <tr>
+        <th width="100" style="text-align:left; padding-left:20px;">ID</th>
+        <th>分类名称</th>
+        <th>分类关键字</th>
+          <th>分类描述</th>
+        <th>分类排序</th>
+        <th width="310">操作</th>
+      </tr>
+        <% data.forEach(item=>{%>
+        <tr>
+            <td><%= item.id %></td>
+            <td><%= item.name %></td>
+            <td><%= item.keywords %></td>
+            <td><%= item.description %></td>
+            <td>
+                <input style="width: 50px;text-align: center;" type="number" name="" value="<%=item.sort %>" id=""onchange="sorts(this,<%= item.id %>)">
+
+            </td>
+        <td>
+            <div class="button-group"> <a class="button border-main" href="/admin/type/edit?id=<%= item.id%>"><span class="icon-edit"></span> 修改</a>
+                &nbsp;&nbsp;&nbsp;<a class="button border-red" href="javascript:void(0)" onclick=" del(this,<%= item.id %>)"><span class="icon-trash-o"></span> 删除</a>
+            </div>
+        </td>
+        </tr>
+
+
+        <% }) %>
+      <tr>
+        <td colspan="8">
+            <div class="pagelist">
+                <%- show %>
+            </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <script>
+      //无刷新删除
+      function del(obj,id) {
+          //确认框
+          if(confirm("您确认要删除吗？")){
+              $.get("/admin/type/ajax_del",{id:id},function (data) {
+                  //判断是否删除成功
+                  if (data==1) {
+                      $(obj).parents("tr").remove();
+                  }else{
+                      alert("删除失败");
+                  }
+              })
+          };
+      }
+      //无刷新更改状态
+      function  sorts(obj,id) {
+          let sort = $(obj).val();
+          //发送ajax请求进行数据删除
+          $.get("/admin/type/ajax_sort",{id:id,sort:sort},function (err,data) {
+              //判断是否执行成功
+              if (data==1){
+                  window.location.reload();
+              };
+          })
+      }
+  </script>
+
+</body>
+</html>
