@@ -23,4 +23,10 @@ localhost:3000/
 # 首页登录效果图
 <img src="https://github.com/world-G/MyGame/blob/master/readme/)L%24JWJBNYHESO(9A%24%24XAL~5.png" width="1000" alt="登录效果图">
 
+# 展示首页
+<img src="https://github.com/world-G/MyGame/blob/master/readme/8E_RY%243~ACZ6KHO4A%5BIS%257H.png" width="1000" alt="首页">
+
+<img src="https://github.com/world-G/MyGame/blob/master/readme/8E_RY%243~ACZ6KHO4A%5BIS%257H.png" width="1000" alt="首页">
+
+
 
