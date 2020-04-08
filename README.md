@@ -19,3 +19,8 @@ localhost:3000/admin
 
 # 前台首页
 localhost:3000/
+
+# 首页登录效果图
+<img src="https://github.com/world-G/MyGame/blob/master/readme/)L%24JWJBNYHESO(9A%24%24XAL~5.png" width="1000" alt="登录效果图">
+
+
