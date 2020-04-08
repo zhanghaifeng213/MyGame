@@ -26,7 +26,7 @@ localhost:3000/
 # 展示首页
 <img src="https://github.com/world-G/MyGame/blob/master/readme/8E_RY%243~ACZ6KHO4A%5BIS%257H.png" width="1000" alt="首页">
 
-<img src="https://github.com/world-G/MyGame/blob/master/readme/8E_RY%243~ACZ6KHO4A%5BIS%257H.png" width="1000" alt="首页">
+<img src="https://github.com/world-G/MyGame/blob/master/readme/`I~XF]UD)XSZ]]AF$8WAVWC.png" width="1000" alt="首页">
 
 
 
